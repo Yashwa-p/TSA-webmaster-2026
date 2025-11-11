@@ -53,12 +53,3 @@ window.addEventListener('scroll', () => {
   if (window.scrollY > 80) header.classList.add('scrolled');
   else header.classList.remove('scrolled');
 });
-
-// --- Dynamic title ---
-const originalTitle = document.title;
-window.addEventListener('blur', () => {
-  document.title = 'Come back 💚 | Newark Nurturing';
-});
-window.addEventListener('focus', () => {
-  document.title = originalTitle;
-});
