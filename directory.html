@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Newark Nurturing - Directory</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="header-left">
+      <img id="logo" src="/TSA-webmaster-2026/NewarkNurturingLogo.png" alt="Newark Nurturing Logo">
+      <h1><a href="index.html" id="home">Newark Nurturing</a></h1>
+    </div>
+    <nav>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="learnMore.html">Learn More</a>
+      <a href="directory.html">Directory</a>
+      <a href="references.html">References</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero fade-section">
+      <h2>Explore Newark Nonprofits</h2>
+      <p>Find organizations that make our community stronger through food, education, arts, housing, and more.</p>
+    </section>
+
+    <section class="directory fade-section">
+      <div class="search-filter">
+        <input type="text" id="searchInput" placeholder="Search nonprofits..." onkeyup="filterDirectory()">
+        <select id="categoryFilter" onchange="filterDirectory()">
+          <option value="">All Categories</option>
+          <option value="Food">Food</option>
+          <option value="Youth">Youth</option>
+          <option value="Housing">Housing</option>
+          <option value="Arts">Arts</option>
+          <option value="Education">Education</option>
+        </select>
+      </div>
+
+      <div class="directory-grid" id="directoryGrid">
+        <!-- Sample nonprofit cards -->
+        <div class="card" data-category="Food">
+          <h3>Community Food Bank</h3>
+          <p>Provides meals and groceries to families in need.</p>
+          <a href="https://communityfoodbank.org" target="_blank" class="cta">Visit</a>
+        </div>
+
+        <div class="card" data-category="Youth">
+          <h3>Hope Collective</h3>
+          <p>Programs for youth development and mentorship.</p>
+          <a href="https://hopecollective.org" target="_blank" class="cta">Visit</a>
+        </div>
+
+        <div class="card" data-category="Housing">
+          <h3>Safe Haven Housing</h3>
+          <p>Support for families facing housing instability.</p>
+          <a href="https://safehavenhousing.org" target="_blank" class="cta">Visit</a>
+        </div>
+
+        <div class="card" data-category="Arts">
+          <h3>Art4Change Foundation</h3>
+          <p>Using creativity to strengthen communities.</p>
+          <a href="https://art4change.org" target="_blank" class="cta">Visit</a>
+        </div>
+
+        <div class="card" data-category="Education">
+          <h3>Newark Learning Center</h3>
+          <p>Provides tutoring and educational support for all ages.</p>
+          <a href="https://newarklearning.org" target="_blank" class="cta">Visit</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Newark Nurturing. All rights reserved.
+  </footer>
+
+  <script href="directory.js">
+  </script>
+</body>
+</html>
