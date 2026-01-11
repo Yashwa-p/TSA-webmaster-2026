@@ -9,10 +9,10 @@ body {
   background: linear-gradient(160deg, #9efcc8, #fbe5d0, #d4f0ff);
   background-size: 400% 400%;
   background-attachment: scroll;
-  transition: background-position 0.2s ease-out;
   color: #333;
   line-height: 1.6;
   scroll-behavior: smooth;
+  transition: background-position 0.2s ease-out;
 }
 
 /* HEADER */
@@ -70,7 +70,8 @@ nav a:hover {
 }
 
 /* Animated underline */
-nav a .underline {
+nav a::after {
+  content: '';
   position: absolute;
   left: 0;
   bottom: -3px;
@@ -82,16 +83,17 @@ nav a .underline {
   transform-origin: right;
 }
 
-nav a:hover .underline {
+nav a:hover::after,
+nav a.active::after {
   transform: scaleX(1);
   transform-origin: left;
 }
 
 /* HERO SECTION */
 .hero {
-  background-color: #fffaf7;
   padding: 140px 20px 80px;
   text-align: center;
+  background: #fffaf7;
   animation: fadeIn 1.2s ease-in-out;
 }
 
@@ -104,68 +106,62 @@ nav a:hover .underline {
 .hero p {
   font-size: 1.2rem;
   color: #555;
-  margin-bottom: 30px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.image-track {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  overflow-x: auto;
-  padding: 15px 0;
-  scrollbar-width: none;
-}
-
-.image-track::-webkit-scrollbar {
-  display: none;
-}
-
-.hero-image {
-  width: 200px;
-  height: 200px;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* CTA BUTTON */
-.cta {
-  background-color: #7fa87f;
-  color: #fff;
-  padding: 12px 26px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s ease, transform 0.2s;
-}
-
-.cta:hover {
-  background-color: #6b8f6b;
-  transform: scale(1.05);
-}
-
-/* SECTIONS */
-.about, .calendar, .contact {
-  padding: 70px 20px;
-  text-align: center;
+/* NONPROFIT SECTION */
+.nonprofits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 80px 40px;
   background-color: #fffaf7;
 }
 
-.about h2, .calendar h2, .contact h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+.nonprofit-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.nonprofit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.nonprofit-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.nonprofit-card h3 {
+  font-size: 1.4rem;
+  margin: 15px 0 8px;
   color: #4c4c4c;
 }
 
-.about p, .founders p, .contact p {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 1.1rem;
+.nonprofit-card p {
   color: #555;
-  line-height: 1.8;
+  font-size: 1rem;
+  padding: 0 15px;
 }
 
 /* CALENDAR */
+
+.calendar h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #4c4c4c;
+    padding-top: 20px;
+}
+
 .calendar-grid {
   display: flex;
   justify-content: center;
@@ -176,16 +172,33 @@ iframe {
   border: 0;
   border-radius: 8px;
   max-width: 100%;
+  padding-bottom: 20px;
 }
 
-/* CONTACT */
-.contact {
-  background-color: #94cba7;
-  color: #fff;
+/* MAP SECTION */
+.map-section {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #f9fdfb;
 }
 
-.contact p {
-  margin-bottom: 25px;
+.map-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #4c4c4c;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+}
+
+.map-container iframe {
+  border: none;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 900px;
+  height: 400px;
 }
 
 /* FOOTER */
@@ -214,149 +227,26 @@ footer {
   transform: translateY(0);
 }
 
-/* BACK TO TOP BUTTON */
-#backToTop {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #6b8f6b;
-  color: white;
-  border: none;
-  padding: 10px 14px;
-  font-size: 1.2rem;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  display: none;
-  z-index: 1000;
-  transition: transform 0.2s ease, background 0.3s;
-}
-#backToTop:hover {
-  background-color: #7fa87f;
-  transform: translateY(-3px);
-}
-
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  nav {
-    display: none;
-  }
-
   header {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 10px;
   }
 
   .hero h2 {
     font-size: 2.2rem;
   }
 
-  .hero-image {
-    width: 150px;
-    height: 150px;
+  .nonprofit-card img {
+    height: 160px;
   }
-}
-/* ===== DIRECTORY ADDITIONS (NON-DESTRUCTIVE) ===== */
 
-.directory-hero {
-  padding: 140px 20px 60px;
-  text-align: center;
-  background-color: #fffaf7;
-}
-
-.directory-hero h2 {
-  font-size: 2.4rem;
-  margin-bottom: 10px;
-  color: #444;
-}
-
-.directory-hero p {
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 1.1rem;
-  color: #555;
-}
-
-/* SEARCH */
-.directory-search {
-  display: flex;
-  justify-content: center;
-  margin: 30px auto;
-}
-
-.directory-search input {
-  width: 100%;
-  max-width: 500px;
-  padding: 14px 18px;
-  border-radius: 30px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
-
-/* FILTERS */
-.directory-filters {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 40px;
-}
-
-.directory-filters button {
-  padding: 8px 16px;
-  border-radius: 20px;
-  border: none;
-  background-color: #e6f2ea;
-  cursor: pointer;
-  font-size: 0.9rem;
-}
-
-.directory-filters button.active,
-.directory-filters button:hover {
-  background-color: #7fa87f;
-  color: white;
-}
-
-/* GRID */
-.directory-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px 60px;
-}
-
-/* CARD */
-.directory-card {
-  background-color: white;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-
-.directory-card h3 {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-}
-
-.directory-card p {
-  font-size: 0.95rem;
-  margin-bottom: 6px;
-}
-
-.directory-card a {
-  color: #6b8f6b;
-  text-decoration: none;
-}
-
-.directory-card a:hover {
-  text-decoration: underline;
-}
-
-/* HELP BLOCK */
-.directory-help {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #f2fbf6;
+  .map-container iframe {
+    width: 100%;
+  }
 }
