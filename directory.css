@@ -1,4 +1,3 @@
-/* RESET & BASE STYLES */
 * {
   margin: 0;
   padding: 0;
@@ -146,13 +145,13 @@ nav a:hover .underline {
 }
 
 /* SECTIONS */
-.about, .founders, .testimonials, .calendar, .contact {
+.about, .calendar, .contact {
   padding: 70px 20px;
   text-align: center;
   background-color: #fffaf7;
 }
 
-.about h2, .founders h2, .calendar h2, .testimonials h2, .contact h2 {
+.about h2, .calendar h2, .contact h2 {
   font-size: 2rem;
   margin-bottom: 20px;
   color: #4c4c4c;
@@ -166,28 +165,6 @@ nav a:hover .underline {
   line-height: 1.8;
 }
 
-/* FOUNDERS */
-.founders-gallery {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin: 20px 0;
-}
-
-.founders-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #94cba7;
-  transition: transform 0.3s ease;
-}
-
-.founders-image:hover {
-  transform: scale(1.05);
-}
-
 /* CALENDAR */
 .calendar-grid {
   display: flex;
@@ -199,21 +176,6 @@ iframe {
   border: 0;
   border-radius: 8px;
   max-width: 100%;
-}
-
-/* TESTIMONIALS */
-.testimonial {
-  max-width: 700px;
-  margin: 0 auto 30px;
-  font-style: italic;
-  color: #555;
-}
-
-.testimonial span {
-  display: block;
-  margin-top: 10px;
-  font-weight: 600;
-  color: #777;
 }
 
 /* CONTACT */
@@ -293,4 +255,108 @@ footer {
     width: 150px;
     height: 150px;
   }
+}
+/* ===== DIRECTORY ADDITIONS (NON-DESTRUCTIVE) ===== */
+
+.directory-hero {
+  padding: 140px 20px 60px;
+  text-align: center;
+  background-color: #fffaf7;
+}
+
+.directory-hero h2 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.directory-hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* SEARCH */
+.directory-search {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+.directory-search input {
+  width: 100%;
+  max-width: 500px;
+  padding: 14px 18px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* FILTERS */
+.directory-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.directory-filters button {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  background-color: #e6f2ea;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.directory-filters button.active,
+.directory-filters button:hover {
+  background-color: #7fa87f;
+  color: white;
+}
+
+/* GRID */
+.directory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+
+/* CARD */
+.directory-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.directory-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.directory-card p {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.directory-card a {
+  color: #6b8f6b;
+  text-decoration: none;
+}
+
+.directory-card a:hover {
+  text-decoration: underline;
+}
+
+/* HELP BLOCK */
+.directory-help {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f2fbf6;
 }
