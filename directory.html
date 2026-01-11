@@ -3,59 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Newark Nurturing</title>
+  <title>Directory | Newark Nurturing</title>
+
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <div class="header-left">
-      <img id="logo" src="/TSA-webmaster-2026/NewarkNurturingLogo.png" alt="Newark Nurturing Logo">
-      <h1><a href="index.html" id="home">Newark Nurturing</a></h1>
+<header>
+  <div class="header-left">
+    <img id="logo" src="/TSA-webmaster-2026/NewarkNurturingLogo.png" alt="Newark Nurturing Logo">
+    <h1><a href="index.html" id="home">Newark Nurturing</a></h1>
+  </div>
+
+  <nav>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="learnMore.html">Learn More</a>
+    <a href="directory.html">Directory</a>
+    <a href="references.html">References</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- DIRECTORY HERO -->
+  <section class="directory-hero fade-section">
+    <h2>Community Resource Directory</h2>
+    <p>
+      Browse local programs, services, and contacts supported by Newark Nurturing.
+      Use the search or filters to find help quickly.
+    </p>
+  </section>
+
+  <!-- SEARCH -->
+  <section class="directory-search fade-section">
+    <input
+      type="text"
+      id="directorySearch"
+      placeholder="Search services, keywords, or names..."
+      aria-label="Search directory"
+    />
+  </section>
+
+  <!-- FILTERS -->
+  <section class="directory-filters fade-section">
+    <button class="active" data-filter="all">All</button>
+    <button data-filter="food">Food & Nutrition</button>
+    <button data-filter="mental">Mental Health</button>
+    <button data-filter="education">Education & Youth</button>
+    <button data-filter="community">Community Support</button>
+  </section>
+
+  <!-- DIRECTORY GRID -->
+  <section class="directory-grid fade-section">
+
+    <div class="directory-card" data-category="food">
+      <h3>Community Food Pantry</h3>
+      <p><strong>What they do:</strong> Weekly food assistance for Newark families.</p>
+      <p><strong>Who qualifies:</strong> Newark residents</p>
+      <p><strong>Hours:</strong> Tue & Thu, 3–6 PM</p>
+      <p><strong>Contact:</strong>
+        <a href="mailto:food@newarknurturing.org">food@newarknurturing.org</a>
+      </p>
     </div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a href="learnMore.html">Learn More</a>
-      <a href="directory.html">Directory</a>
-      <a href="references.html">References</a>
-    </nav>
-  </header>
 
-  <main>
-    <section class="hero fade-section">
-      <p></p>
-      <div class="image-track">
-        <img class="hero-image" src="" alt="">
-        <img class="hero-image" src="" alt="">
-      </div>
-    </section>
-    
-    <section class="calendar fade-section">
-      <h2>Upcoming Events</h2>
-      <div class="calendar-grid">
-        <iframe src="https://calendar.google.com/calendar/embed?src=37b757664b5d93fa9e3cf6ab224a6f0463033d99ce59399c174c90eafc3014f7%40group.calendar.google.com&ctz=America%2FNew_York"
-          frameborder="0"
-          scrolling="no"
-          title="Event Calendar"
-          width="800"
-          height="600">
-        </iframe>
-      </div>
-    </section>
-    
-    <section class="contact fade-section" id="contact">
-      <h2>Contact Us</h2>
-      <p>Got questions or want to collaborate? Let’s create something meaningful together.</p>
-      <a href="mailto:NewarkNurturing@gmail.com" class="cta">Email Us</a>
-    </section>
-  </main>
+    <div class="directory-card" data-category="mental">
+      <h3>Family Counseling Program</h3>
+      <p><strong>What they do:</strong> Low-cost counseling and mental health support.</p>
+      <p><strong>Who qualifies:</strong> Families & individuals</p>
+      <p><strong>Access:</strong> Appointment required</p>
+      <p><strong>Contact:</strong>
+        <a href="mailto:counseling@newarknurturing.org">counseling@newarknurturing.org</a>
+      </p>
+    </div>
 
-  <footer>
-    &copy; 2025 Newark Nurturing. All rights reserved.
-  </footer>
+    <div class="directory-card" data-category="education">
+      <h3>Youth Learning Workshops</h3>
+      <p><strong>What they do:</strong> After-school enrichment & tutoring.</p>
+      <p><strong>Ages:</strong> 8–16</p>
+      <p><strong>Cost:</strong> Free</p>
+      <p><strong>Contact:</strong>
+        <a href="mailto:youth@newarknurturing.org">youth@newarknurturing.org</a>
+      </p>
+    </div>
 
-  <script src="script.js"></script>
+  </section>
+
+  <!-- HELP BLOCK -->
+  <section class="directory-help fade-section">
+    <h3>Not sure where to start?</h3>
+    <p>Email us and we’ll help you find the right resource.</p>
+    <a href="mailto:polymerbloominfo@gmail.com" class="cta">Get Help</a>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2025 Newark Nurturing. All rights reserved.
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
