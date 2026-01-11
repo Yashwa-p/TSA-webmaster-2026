@@ -3,106 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Directory | Newark Nurturing</title>
-
+  <title>Newark Nurturing</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-<header>
-  <div class="header-left">
-    <img id="logo" src="/TSA-webmaster-2026/NewarkNurturingLogo.png" alt="Newark Nurturing Logo">
-    <h1><a href="index.html" id="home">Newark Nurturing</a></h1>
-  </div>
-
-  <nav>
-    <a href="index.html#about">About</a>
-    <a href="index.html#contact">Contact</a>
-    <a href="learnMore.html">Learn More</a>
-    <a href="directory.html">Directory</a>
-    <a href="references.html">References</a>
-  </nav>
-</header>
-
-<main>
-
-  <!-- DIRECTORY HERO -->
-  <section class="directory-hero fade-section">
-    <h2>Community Resource Directory</h2>
-    <p>
-      Browse local programs, services, and contacts supported by Newark Nurturing.
-      Use the search or filters to find help quickly.
-    </p>
-  </section>
-
-  <!-- SEARCH -->
-  <section class="directory-search fade-section">
-    <input
-      type="text"
-      id="directorySearch"
-      placeholder="Search services, keywords, or names..."
-      aria-label="Search directory"
-    />
-  </section>
-
-  <!-- FILTERS -->
-  <section class="directory-filters fade-section">
-    <button class="active" data-filter="all">All</button>
-    <button data-filter="food">Food & Nutrition</button>
-    <button data-filter="mental">Mental Health</button>
-    <button data-filter="education">Education & Youth</button>
-    <button data-filter="community">Community Support</button>
-  </section>
-
-  <!-- DIRECTORY GRID -->
-  <section class="directory-grid fade-section">
-
-    <div class="directory-card" data-category="food">
-      <h3>Community Food Pantry</h3>
-      <p><strong>What they do:</strong> Weekly food assistance for Newark families.</p>
-      <p><strong>Who qualifies:</strong> Newark residents</p>
-      <p><strong>Hours:</strong> Tue & Thu, 3–6 PM</p>
-      <p><strong>Contact:</strong>
-        <a href="mailto:food@newarknurturing.org">food@newarknurturing.org</a>
-      </p>
+  <header>
+    <div class="header-left">
+      <img id="logo" src="/TSA-webmaster-2026/NewarkNurturingLogo.png" alt="Newark Nurturing Logo">
+      <h1><a href="index.html" id="home">Newark Nurturing</a></h1>
     </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="learnMore.html">Learn More</a>
+      <a href="directory.html">Directory</a>
+      <a href="references.html">References</a>
+    </nav>
+  </header>
 
-    <div class="directory-card" data-category="mental">
-      <h3>Family Counseling Program</h3>
-      <p><strong>What they do:</strong> Low-cost counseling and mental health support.</p>
-      <p><strong>Who qualifies:</strong> Families & individuals</p>
-      <p><strong>Access:</strong> Appointment required</p>
-      <p><strong>Contact:</strong>
-        <a href="mailto:counseling@newarknurturing.org">counseling@newarknurturing.org</a>
+  <main>
+    <section class="hero fade-section">
+      <h2>Supporting Nonprofits Through Art & Community</h2>
+      <p>Together, we empower local causes by blending creativity with compassion.</p>
+      <div class="image-track">
+        <img class="hero-image" src="assets/hero1.jpg" alt="Community Art Project">
+        <img class="hero-image" src="assets/hero2.jpg" alt="Nonprofit Collaboration">
+      </div>
+    </section>
+
+    <section class="about fade-section" id="about">
+      <h2>About Us</h2>
+      <p>
+        Newark Nurturing is dedicated to amplifying the voices of local nonprofits through the power of art. We believe creativity drives change — our workshops, collaborations, and community events bring people together to make a difference. A portion of our proceeds directly supports organizations that strengthen our community.
       </p>
-    </div>
+    </section>
 
-    <div class="directory-card" data-category="education">
-      <h3>Youth Learning Workshops</h3>
-      <p><strong>What they do:</strong> After-school enrichment & tutoring.</p>
-      <p><strong>Ages:</strong> 8–16</p>
-      <p><strong>Cost:</strong> Free</p>
-      <p><strong>Contact:</strong>
-        <a href="mailto:youth@newarknurturing.org">youth@newarknurturing.org</a>
-      </p>
-    </div>
+    <section class="founders fade-section" id="about-founder">
+      <h2>Our Founders</h2>
+      <div class="founders-gallery">
+        <img src="assets/founder1.jpg" alt="Founder 1" class="founders-image">
+        <img src="assets/founder2.jpg" alt="Founder 2" class="founders-image">
+        <img src="assets/founder3.jpg" alt="Founder 3" class="founders-image">
+        <img src="assets/founder4.jpg" alt="Founder 4" class="founders-image">
+      </div>
+      <p>We’re a group of artists and organizers committed to helping nonprofits thrive through creativity and collaboration.</p>
+    </section>
 
-  </section>
+    <section class="calendar fade-section">
+      <h2>Upcoming Events</h2>
+      <div class="calendar-grid">
+        <iframe src="https://calendar.google.com/calendar/embed?src=37b757664b5d93fa9e3cf6ab224a6f0463033d99ce59399c174c90eafc3014f7%40group.calendar.google.com&ctz=America%2FNew_York"
+          frameborder="0"
+          scrolling="no"
+          title="Event Calendar"
+          width="800"
+          height="600">
+        </iframe>
+      </div>
+    </section>
 
-  <!-- HELP BLOCK -->
-  <section class="directory-help fade-section">
-    <h3>Not sure where to start?</h3>
-    <p>Email us and we’ll help you find the right resource.</p>
-    <a href="mailto:polymerbloominfo@gmail.com" class="cta">Get Help</a>
-  </section>
+    <section class="testimonials fade-section">
+      <h2>What Nonprofits Say</h2>
+      <div class="testimonial">
+        <p>“Newark Nurturing helped our organization bring art into the community and raise awareness like never before.”</p>
+        <span>- Art4Change Foundation</span>
+      </div>
+      <div class="testimonial">
+        <p>“Their workshops are inspiring — we saw real engagement and creativity blossom among participants.”</p>
+        <span>- Hope Collective</span>
+      </div>
+    </section>
 
-</main>
+    <section class="contact fade-section" id="contact">
+      <h2>Contact Us</h2>
+      <p>Got questions or want to collaborate? Let’s create something meaningful together.</p>
+      <a href="mailto:polymerbloominfo@gmail.com" class="cta">Email Us</a>
+    </section>
+  </main>
 
-<footer>
-  &copy; 2025 Newark Nurturing. All rights reserved.
-</footer>
+  <footer>
+    &copy; 2025 Newark Nurturing. All rights reserved.
+  </footer>
 
-<script src="directory.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
