@@ -110,6 +110,34 @@ nav a.active::after {
   margin: 0 auto;
 }
 
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 40px 20px;
+  background-color: #fffaf7;
+}
+
+.filter-btn {
+  padding: 10px 24px;
+  border-radius: 25px;
+  border: 2px solid #94cba7;
+  background: transparent;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #94cba7;
+  color: white;
+}
+
+.filter-btn.active {
+  background-color: #94cba7;
+  color: white;
+}
+
 /* NONPROFIT SECTION */
 .nonprofits {
   display: grid;
