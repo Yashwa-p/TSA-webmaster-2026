@@ -72,3 +72,23 @@ function filterDirectory() {
         }
       });
     }
+
+// FILTER LOGIC
+const buttons = document.querySelectorAll(".filter-btn");
+const cards = document.querySelectorAll(".nonprofit-card");
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    buttons.forEach(btn => btn.classList.remove("active"));
+    button.classList.add("active");
+
+    const filter = button.dataset.filter;
+
+    cards.forEach(card => {
+      card.style.display =
+        filter === "all" || card.dataset.category === filter
+          ? "block"
+          : "none";
+    });
+  });
+});
