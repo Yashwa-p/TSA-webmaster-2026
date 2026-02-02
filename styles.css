@@ -241,6 +241,14 @@ nav a:hover .underline {
   transform: scale(1.05);
 }
 
+#how-you-can-help {
+  text-align: center;
+}
+
+#get-involved {
+  text-align: center;
+}
+
 /* TESTIMONIALS */
 .testimonial {
   max-width: 700px;
