@@ -187,9 +187,9 @@ nav a:hover .underline {
   transform: scale(1.05);
 }
 
-/* HOW YOU CAN HELP
+/* HOW YOU CAN HELP */
 .how-you-can-help {
-  background-color: #d4f0e0; /* soft green */
+  background-color: white;
   padding: 80px 20px;
   border-radius: 12px;
   text-align: center;
