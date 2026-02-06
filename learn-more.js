@@ -53,29 +53,3 @@ window.addEventListener('scroll', () => {
   if (window.scrollY > 80) header.classList.add('scrolled');
   else header.classList.remove('scrolled');
 });  
-
-document.getElementById("nonprofitForm").addEventListener("submit", function(e) {
-  e.preventDefault(); // Prevent page reload
-
-  // Get form values
-  const name = document.getElementById("name").value;
-  const website = document.getElementById("website").value;
-  const description = document.getElementById("description").value;
-  const category = document.getElementById("category").value;
-
-  // Create a new nonprofit card
-  const card = document.createElement("div");
-  card.classList.add("nonprofit-card");
-  card.innerHTML = `
-    <h3>${name}</h3>
-    <p><strong>Category:</strong> ${category}</p>
-    <p>${description}</p>
-    <a href="${website}" target="_blank">Visit Website</a>
-  `;
-
-  // Append to the grid
-  document.getElementById("submittedNonprofits").appendChild(card);
-
-  // Reset form
-  this.reset();
-});
