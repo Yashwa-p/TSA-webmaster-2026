@@ -202,6 +202,88 @@ iframe {
   height: 400px;
 }
 
+.add-nonprofit {
+  padding: 60px 20px;
+  background-color: #f4fff8;
+  text-align: center;
+}
+
+.add-nonprofit h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #4c4c4c;
+}
+
+.add-nonprofit p {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.nonprofit-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.nonprofit-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #4c4c4c;
+}
+
+.nonprofit-form input,
+.nonprofit-form textarea,
+.nonprofit-form select {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.nonprofit-form input:focus,
+.nonprofit-form textarea:focus,
+.nonprofit-form select:focus {
+  border-color: #4c8f6b;
+}
+
+.nonprofit-form textarea {
+  border-radius: 15px;
+  resize: vertical;
+}
+
+.nonprofit-form .cta {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 30px;
+  background-color: #4c8f6b;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.nonprofit-form .cta:hover {
+  background-color: #3b6b4a;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nonprofit-form {
+    width: 100%;
+  }
+}
+
+
 /* FOOTER */
 footer {
   text-align: center;
