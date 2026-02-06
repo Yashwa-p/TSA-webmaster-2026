@@ -53,3 +53,31 @@ window.addEventListener('scroll', () => {
   if (window.scrollY > 80) header.classList.add('scrolled');
   else header.classList.remove('scrolled');
 });  
+
+// grab form and list elements
+const form = document.getElementById("nonprofitForm");
+const list = document.getElementById("nonprofitList");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault(); // prevent page reload
+
+  // get values
+  const name = document.getElementById("name").value;
+  const website = document.getElementById("website").value;
+  const description = document.getElementById("description").value;
+  const contact = document.getElementById("contact").value;
+  const category = document.getElementById("category").value;
+
+  // create list item
+  const li = document.createElement("li");
+  li.innerHTML = `<strong>${name}</strong> (${category})<br>
+                  ${description}<br>
+                  Contact: <a href="mailto:${contact}">${contact}</a><br>
+                  Website: <a href="${website}" target="_blank">${website}</a>`;
+
+  // append to list
+  list.appendChild(li);
+
+  // reset form
+  form.reset();
+});
