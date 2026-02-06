@@ -253,6 +253,27 @@ nav a:hover .underline {
 }
 
 /* COMMUNITY IMPACT */
+.impact {
+  padding: 70px 20px;
+  text-align: center;
+  background-color: #fffaf7;
+}
+
+.impact h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #4c4c4c;
+}
+
+.impact p {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Stats cards */
 .impact-stats {
   display: flex;
   justify-content: center;
@@ -286,6 +307,17 @@ nav a:hover .underline {
 .impact-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .impact-stats {
+    gap: 15px;
+  }
+
+  .impact-card {
+    max-width: 45%;
+  }
 }
 
 /* FOOTER */
