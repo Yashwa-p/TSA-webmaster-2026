@@ -17,6 +17,8 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="#about">About</a>
+      <a href="#how-you-can-help-section">Get Involved</a>
+      <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
       <a href="learnMore.html">Learn More</a>
       <a href="directory.html">Directory</a>
@@ -25,59 +27,129 @@
   </header>
 
   <main>
+    <!-- HERO SECTION -->
     <section class="hero fade-section">
       <h2>Supporting Nonprofits Through Art & Community</h2>
       <p>Together, we empower local causes by blending creativity with compassion.</p>
       <div class="image-track">
-        <img class="" alt="Community Art Project">
-        <img class="" alt="Nonprofit Collaboration">
+        <img class="hero-image" src="/images/community-art.jpg" alt="Community Art Project">
+        <img class="hero-image" src="/images/nonprofit-collab.jpg" alt="Nonprofit Collaboration">
+        <img class="hero-image" src="/images/workshop.jpg" alt="Art Workshop">
       </div>
     </section>
 
+    <!-- ABOUT US -->
     <section class="about fade-section" id="about">
       <h2>About Us</h2>
       <p>
         Newark Nurturing is dedicated to amplifying the voices of local nonprofits through the power of art. We believe creativity drives change — our workshops, collaborations, and community events bring people together to make a difference. A portion of our proceeds directly supports organizations that strengthen our community.
       </p>
-    </section>
-    
-    <section class="about fade-section" id="how-you-can-help-section">
-      <h2 id="how-you-can-help">How You Can Help</h2>
       <p>
-        There are several ways you can make a difference in our community:
+        Founded in 2023, we have organized over 20 community art projects and partnered with 15 local nonprofits. Our goal is to build a sustainable network of volunteers, artists, and supporters who share the mission of fostering creativity and compassion.
       </p>
+    </section>
+
+    <!-- HOW YOU CAN HELP -->
+    <section class="how-you-can-help fade-section" id="how-you-can-help-section">
+      <h2>How You Can Help</h2>
+      <p>There are several ways you can make a difference in our community:</p>
       <ul>
         <li><strong>Volunteer Your Time:</strong> Join workshops or help at events to support local nonprofits.</li>
         <li><strong>Spread Awareness:</strong> Share our initiatives and events on social media to amplify impact.</li>
         <li><strong>Donate Materials:</strong> Art supplies, resources, or funds go a long way in supporting our programs.</li>
         <li><strong>Collaborate With Us:</strong> Offer your skills or services to strengthen community projects.</li>
+        <li><strong>Attend Events:</strong> Participate in exhibitions, fundraisers, and community meetups.</li>
       </ul>
       <a href="#contact" class="cta" id="get-involved">Get Involved Today</a>
     </section>
-    
-    <section class="testimonials fade-section">
-      <h2>What Nonprofits Say</h2>
-      <div class="testimonial">
-        <p>“Quote 1”</p>
-        <span>- Nonprofit 1</span>
-      </div>
-      <div class="testimonial">
-        <p>“Quote 2”</p>
-        <span>- Nonprofit 2</span>
+
+    <!-- COMMUNITY IMPACT -->
+    <section class="impact fade-section" id="impact">
+      <h2>Our Community Impact</h2>
+      <p>See how Newark Nurturing is making a real difference through art and collaboration.</p>
+      <div class="impact-stats">
+        <div class="impact-card">
+          <h3>20+</h3>
+          <p>Community Art Projects Completed</p>
+        </div>
+        <div class="impact-card">
+          <h3>15+</h3>
+          <p>Local Nonprofits Supported</p>
+        </div>
+        <div class="impact-card">
+          <h3>500+</h3>
+          <p>Volunteers Engaged</p>
+        </div>
+        <div class="impact-card">
+          <h3>$25k+</h3>
+          <p>Funds & Supplies Donated</p>
+        </div>
       </div>
     </section>
 
+    <!-- GALLERY -->
+    <section class="gallery fade-section" id="gallery">
+      <h2>Gallery</h2>
+      <p>Snapshots of our community art projects, workshops, and collaborations.</p>
+      <div class="image-track">
+        <img class="hero-image" src="/images/project1.jpg" alt="Art Project 1">
+        <img class="hero-image" src="/images/project2.jpg" alt="Art Project 2">
+        <img class="hero-image" src="/images/project3.jpg" alt="Art Project 3">
+        <img class="hero-image" src="/images/project4.jpg" alt="Art Project 4">
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials fade-section">
+      <h2>What Nonprofits Say</h2>
+      <div class="testimonial">
+        <p>“Newark Nurturing has transformed the way we reach our community. Their creativity and dedication are unmatched.”</p>
+        <span>- Hope Arts Foundation</span>
+      </div>
+      <div class="testimonial">
+        <p>“Working with Newark Nurturing has opened new doors for engagement and support. Their team is phenomenal!”</p>
+        <span>- Newark Youth Initiative</span>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
     <section class="contact fade-section" id="contact">
       <h2>Contact Us</h2>
-      <p>Got questions or want to collaborate? Let’s create something meaningful together.</p>
+      <p>Got questions, want to volunteer, or looking to collaborate? Let’s create something meaningful together.</p>
       <a href="mailto:newarknurturinginfo@gmail.com" class="cta">Email Us</a>
     </section>
   </main>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button id="backToTop" title="Back to top">↑</button>
 
   <footer>
     &copy; 2026 Newark Nurturing. All rights reserved.
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // Back to top functionality
+    const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Fade in on scroll
+    const fadeSections = document.querySelectorAll(".fade-section");
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add("visible");
+        });
+      },
+      { threshold: 0.2 }
+    );
+    fadeSections.forEach(section => observer.observe(section));
+  </script>
 </body>
 </html>
+
