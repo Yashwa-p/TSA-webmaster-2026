@@ -54,30 +54,28 @@ window.addEventListener('scroll', () => {
   else header.classList.remove('scrolled');
 });  
 
-// grab form and list elements
-const form = document.getElementById("nonprofitForm");
-const list = document.getElementById("nonprofitList");
+document.getElementById("nonprofitForm").addEventListener("submit", function(e) {
+  e.preventDefault(); // Prevent page reload
 
-form.addEventListener("submit", function(e) {
-  e.preventDefault(); // prevent page reload
-
-  // get values
+  // Get form values
   const name = document.getElementById("name").value;
   const website = document.getElementById("website").value;
   const description = document.getElementById("description").value;
-  const contact = document.getElementById("contact").value;
   const category = document.getElementById("category").value;
 
-  // create list item
-  const li = document.createElement("li");
-  li.innerHTML = `<strong>${name}</strong> (${category})<br>
-                  ${description}<br>
-                  Contact: <a href="mailto:${contact}">${contact}</a><br>
-                  Website: <a href="${website}" target="_blank">${website}</a>`;
+  // Create a new nonprofit card
+  const card = document.createElement("div");
+  card.classList.add("nonprofit-card");
+  card.innerHTML = `
+    <h3>${name}</h3>
+    <p><strong>Category:</strong> ${category}</p>
+    <p>${description}</p>
+    <a href="${website}" target="_blank">Visit Website</a>
+  `;
 
-  // append to list
-  list.appendChild(li);
+  // Append to the grid
+  document.getElementById("submittedNonprofits").appendChild(card);
 
-  // reset form
-  form.reset();
+  // Reset form
+  this.reset();
 });
