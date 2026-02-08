@@ -70,7 +70,8 @@ nav a:hover {
 }
 
 /* Animated underline */
-nav a .underline {
+nav a::after {
+  content: '';
   position: absolute;
   left: 0;
   bottom: -3px;
@@ -82,7 +83,8 @@ nav a .underline {
   transform-origin: right;
 }
 
-nav a:hover .underline {
+nav a:hover::after,
+nav a.active::after {
   transform: scaleX(1);
   transform-origin: left;
 }
