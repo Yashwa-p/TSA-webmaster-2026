@@ -33,20 +33,6 @@ document.querySelectorAll('nav a').forEach(link => {
   link.appendChild(span);
 });
 
-// --- Back to top button ---
-const backToTop = document.createElement('button');
-backToTop.textContent = '↑';
-backToTop.id = 'backToTop';
-document.body.appendChild(backToTop);
-
-backToTop.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-window.addEventListener('scroll', () => {
-  backToTop.style.display = window.scrollY > 400 ? 'block' : 'none';
-});
-
 // --- Header color change on scroll ---
 const header = document.querySelector('header');
 window.addEventListener('scroll', () => {
