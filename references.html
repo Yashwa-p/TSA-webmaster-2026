@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn More | Newark Nurturing</title>
+    <link rel="stylesheet" href="learn-more.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <img id="logo" src="/TSA-webmaster-2026/NewarkNurturingLogo.png" alt="Newark Nurturing Logo">
+        <h1><a href="index.html" id="home">Newark Nurturing</a></h1>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="learnMore.html">Learn More</a>
+        <a href="directory.html">Directory</a>
+        <a href="references.html">References</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero fade-section">
+        <h2>Nonprofits We Support</h2>
+        <p>
+          Newark Nurturing partners with organizations that bring creativity and compassion to life.  
+          Here are some of the wonderful nonprofits we collaborate with.
+        </p>
+      </section>
+      <section class="calendar fade-section">
+        <h2>Upcoming Events</h2>
+        <div class="calendar-grid">
+          <iframe src="https://calendar.google.com/calendar/embed?src=37b757664b5d93fa9e3cf6ab224a6f0463033d99ce59399c174c90eafc3014f7%40group.calendar.google.com&ctz=America%2FNew_York"
+            frameborder="0"
+            scrolling="no"
+            title="Event Calendar"
+            width="800"
+            height="600">
+          </iframe>
+        </div>
+      </section>
+      
+      <section class="map-section fade-section">
+        <h2>Find Nonprofits in Newark, Delaware</h2>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/d/u/0/embed?mid=1iTtm_Q2LEDAz08-Avtpe6RRv_MHcPSQ&ehbc=2E312F&noprof=1"
+            width="100%"
+            height="400"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+          
+        </div>
+      </section>
+    </main>
+  
+    <section class="add-nonprofit fade-section">
+      <h2>Add a Nonprofit</h2>
+      <p>If you know a nonprofit in Newark that should be featured, submit their details below!</p>
+      
+      <form action="#" method="get" class="nonprofit-form">
+        <label for="name">Nonprofit Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter nonprofit name" required>
+    
+        <label for="website">Website</label>
+        <input type="url" id="website" name="website" placeholder="https://example.org" required>
+    
+        <label for="description">Short Description</label>
+        <textarea id="description" name="description" placeholder="A brief description of the nonprofit" rows="4" required></textarea>
+    
+        <label for="contact">Contact Email</label>
+        <input type="email" id="contact" name="contact" placeholder="email@example.org" required>
+    
+        <label for="category">Category</label>
+        <select id="category" name="category" required>
+          <option value="" disabled selected>Select category</option>
+          <option value="arts">Arts & Culture</option>
+          <option value="environment">Environment</option>
+          <option value="education">Education</option>
+          <option value="community">Community Support</option>
+          <option value="health">Health & Wellness</option>
+          <option value="other">Other</option>
+        </select>
+      <button type="submit" class="cta">Submit Nonprofit</button>
+    </form>
+  </section>
+  
+    <footer>
+      &copy; 2025 Newark Nurturing. All rights reserved.
+    </footer>
+  
+    <script src="learn-more.js"></script>
+  </body>
+</html>
