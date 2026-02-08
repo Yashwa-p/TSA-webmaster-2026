@@ -181,6 +181,7 @@ nav a.active::after {
   color: #555;
   font-size: 1rem;
   padding: 0 15px;
+  min-height: 140px;
 }
 
 .nonprofit-card a {
