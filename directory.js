@@ -34,10 +34,13 @@ document.querySelectorAll('nav a').forEach(link => {
 });
 
 // --- Back to top button ---
-const backToTop = document.createElement('button');
-backToTop.textContent = '↑';
-backToTop.id = 'backToTop';
-document.body.appendChild(backToTop);
+const backToTop = document.getElementById("backToTop");
+window.addEventListener("scroll", () => {
+backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+backToTop.addEventListener("click", () => {
+window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 
 backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -54,41 +57,3 @@ window.addEventListener('scroll', () => {
   else header.classList.remove('scrolled');
 });
 
-function filterDirectory() {
-      const searchInput = document.getElementById('searchInput').value.toLowerCase();
-      const categoryFilter = document.getElementById('categoryFilter').value;
-      const cards = document.querySelectorAll('.directory-grid .card');
-
-      cards.forEach(card => {
-        const name = card.querySelector('h3').textContent.toLowerCase();
-        const desc = card.querySelector('p').textContent.toLowerCase();
-        const category = card.getAttribute('data-category');
-
-        if ((name.includes(searchInput) || desc.includes(searchInput)) &&
-            (categoryFilter === '' || category === categoryFilter)) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
-
-// FILTER LOGIC
-const buttons = document.querySelectorAll(".filter-btn");
-const cards = document.querySelectorAll(".nonprofit-card");
-
-buttons.forEach(button => {
-  button.addEventListener("click", () => {
-    buttons.forEach(btn => btn.classList.remove("active"));
-    button.classList.add("active");
-
-    const filter = button.dataset.filter;
-
-    cards.forEach(card => {
-      card.style.display =
-        filter === "all" || card.dataset.category === filter
-          ? "block"
-          : "none";
-    });
-  });
-});
