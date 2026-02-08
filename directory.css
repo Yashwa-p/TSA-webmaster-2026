@@ -255,7 +255,7 @@ footer {
 .add-nonprofit h2 {
   max-width: 600px;      
   margin: 0 auto 15px;
-  text-align: center;
+  padding-left: 570px;
 }
 
 .add-nonprofit p {
