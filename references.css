@@ -111,85 +111,42 @@ nav a.active::after {
   margin: 0 auto;
 }
 
-.add-nonprofit {
-  padding: 60px 20px;
-  background-color: #f4fff8;
-  text-align: center;
-}
-
-.add-nonprofit h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: #4c4c4c;
-}
-
-.add-nonprofit p {
-  max-width: 650px;
-  margin: 0 auto 30px;
-  font-size: 1.1rem;
-  color: #555;
-}
-
-.nonprofit-form {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.nonprofit-form label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: 600;
-  color: #4c4c4c;
-}
-
-.nonprofit-form input,
-.nonprofit-form textarea,
-.nonprofit-form select {
-  width: 100%;
-  padding: 12px 15px;
-  margin-bottom: 20px;
-  border-radius: 30px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  outline: none;
-  transition: border-color 0.3s ease;
-}
-
-.nonprofit-form input:focus,
-.nonprofit-form textarea:focus,
-.nonprofit-form select:focus {
-  border-color: #4c8f6b;
-}
-
-.nonprofit-form textarea {
-  border-radius: 15px;
-  resize: vertical;
-}
-
-.nonprofit-form .cta {
-  display: inline-block;
-  padding: 12px 28px;
-  border-radius: 30px;
-  background-color: #4c8f6b;
-  color: #fff;
-  font-weight: 600;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s;
-}
-
-.nonprofit-form .cta:hover {
-  background-color: #3b6b4a;
-  transform: scale(1.05);
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .nonprofit-form {
     width: 100%;
   }
+}
+
+.match-section {
+  background-color: white;
+  padding: 80px 20px;
+  max-width: 700px;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.match-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.match-section select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: 'Barlow', sans-serif;
+}
+
+.match-result {
+  margin-top: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2f5c3f;
 }
 
 /* CALENDAR */
