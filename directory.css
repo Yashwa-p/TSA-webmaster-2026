@@ -180,6 +180,28 @@ nav a.active::after {
   padding: 0 15px;
 }
 
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #6b8f6b;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: none;
+  z-index: 1000;
+  transition: transform 0.2s ease, background 0.3s;
+}
+
+#backToTop:hover {
+  background-color: #7fa87f;
+  transform: translateY(-3px);
+}
+
 /* FOOTER */
 footer {
   text-align: center;
