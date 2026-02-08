@@ -239,7 +239,7 @@ footer {
 .add-nonprofit {
   padding: 60px 20px;
   background-color: #f4fff8;
-
+}
 /* ANIMATIONS */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(15px); }
