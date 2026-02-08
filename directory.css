@@ -247,21 +247,19 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 
+.add-nonprofit h2,
+.add-nonprofit p {
+  text-align: center;
+}
+
 .add-nonprofit h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: #4c4c4c;
-  margin-right: auto;
-  margin-left: auto;
+  max-width: 600px; /* optional, keeps it from stretching too wide */
+  margin: 0 auto 15px;
 }
 
 .add-nonprofit p {
   max-width: 650px;
   margin: 0 auto 30px;
-  font-size: 1.1rem;
-  color: #555;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .nonprofit-form {
