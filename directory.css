@@ -250,7 +250,8 @@ footer {
   font-size: 2rem;
   margin-bottom: 15px;
   color: #4c4c4c;
-  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .add-nonprofit p {
@@ -258,6 +259,8 @@ footer {
   margin: 0 auto 30px;
   font-size: 1.1rem;
   color: #555;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .nonprofit-form {
