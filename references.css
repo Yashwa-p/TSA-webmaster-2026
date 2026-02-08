@@ -1,0 +1,428 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  background: linear-gradient(160deg, #9efcc8, #fbe5d0, #d4f0ff);
+  background-size: 400% 400%;
+  background-attachment: scroll;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  transition: background-position 0.2s ease-out;
+}
+
+/* HEADER */
+header {
+  background-color: #94cba7;
+  padding: 15px 40px;
+  border-bottom: 1px solid #e4ddd6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.4s ease;
+}
+
+header.scrolled {
+  background-color: #7fa87f;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#logo {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  border-radius: 10%;
+}
+
+h1 a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* NAVIGATION */
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #6c4b4b;
+}
+
+/* Animated underline */
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background: #6c4b4b;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: right;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* HERO SECTION */
+.hero {
+  padding: 140px 20px 80px;
+  text-align: center;
+  background: #fffaf7;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.hero h2 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.add-nonprofit {
+  padding: 60px 20px;
+  background-color: #f4fff8;
+  text-align: center;
+}
+
+.add-nonprofit h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #4c4c4c;
+}
+
+.add-nonprofit p {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.nonprofit-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.nonprofit-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #4c4c4c;
+}
+
+.nonprofit-form input,
+.nonprofit-form textarea,
+.nonprofit-form select {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.nonprofit-form input:focus,
+.nonprofit-form textarea:focus,
+.nonprofit-form select:focus {
+  border-color: #4c8f6b;
+}
+
+.nonprofit-form textarea {
+  border-radius: 15px;
+  resize: vertical;
+}
+
+.nonprofit-form .cta {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 30px;
+  background-color: #4c8f6b;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.nonprofit-form .cta:hover {
+  background-color: #3b6b4a;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nonprofit-form {
+    width: 100%;
+  }
+}
+
+/* CALENDAR */
+
+.calendar h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #4c4c4c;
+    padding-top: 20px;
+}
+
+.calendar-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+iframe {
+  border: 0;
+  border-radius: 8px;
+  max-width: 100%;
+  padding-bottom: 20px;
+}
+
+/* MAP SECTION */
+.map-section {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #f9fdfb;
+}
+
+.map-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #4c4c4c;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+}
+
+.map-container iframe {
+  border: none;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 900px;
+  height: 400px;
+}
+
+.add-nonprofit {
+  padding: 60px 20px;
+  background-color: #f4fff8;
+  text-align: center;
+}
+
+.add-nonprofit h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #4c4c4c;
+}
+
+.add-nonprofit p {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.nonprofit-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.nonprofit-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #4c4c4c;
+}
+
+.nonprofit-form input,
+.nonprofit-form textarea,
+.nonprofit-form select {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.nonprofit-form input:focus,
+.nonprofit-form textarea:focus,
+.nonprofit-form select:focus {
+  border-color: #4c8f6b;
+}
+
+.nonprofit-form textarea {
+  border-radius: 15px;
+  resize: vertical;
+}
+
+.nonprofit-form .cta {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 30px;
+  background-color: #4c8f6b;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.nonprofit-form .cta:hover {
+  background-color: #3b6b4a;
+  transform: scale(1.05);
+}
+.nonprofits-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.nonprofit-card {
+  background-color: #fffaf7;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 280px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nonprofit-card h3 {
+  margin-bottom: 8px;
+  color: #4c4c4c;
+}
+
+.nonprofit-card p {
+  color: #555;
+  line-height: 1.5;
+}
+
+.nonprofit-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #4c8f6b;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nonprofit-card a:hover {
+  text-decoration: underline;
+}
+
+.nonprofit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nonprofits-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nonprofit-card {
+    max-width: 90%;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nonprofit-form {
+    width: 100%;
+  }
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  color: white;
+  font-size: 0.9rem;
+  background-color: #555;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* SCROLL FADE-IN */
+.fade-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+
+  .nonprofit-card img {
+    height: 160px;
+  }
+
+  .map-container iframe {
+    width: 100%;
+  }
+}
