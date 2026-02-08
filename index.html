@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
   <header>
     <div class="header-left">
@@ -116,36 +115,11 @@
     </section>
   </main>
 
-  <!-- BACK TO TOP BUTTON -->
-  <button id="backToTop" title="Back to top">↑</button>
-
   <footer>
     &copy; 2026 Newark Nurturing. All rights reserved.
   </footer>
 
   <script src="script.js"></script>
-  <script>
-    // Back to top functionality
-    const backToTop = document.getElementById("backToTop");
-    window.addEventListener("scroll", () => {
-      backToTop.style.display = window.scrollY > 300 ? "block" : "none";
-    });
-    backToTop.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-
-    // Fade in on scroll
-    const fadeSections = document.querySelectorAll(".fade-section");
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) entry.target.classList.add("visible");
-        });
-      },
-      { threshold: 0.2 }
-    );
-    fadeSections.forEach(section => observer.observe(section));
-  </script>
 </body>
 </html>
 
