@@ -253,7 +253,8 @@ footer {
 }
 
 .add-nonprofit h2 {
-  max-width: 600px; /* optional, keeps it from stretching too wide */
+  display: inline-block;
+  max-width: 600px;      
   margin: 0 auto 15px;
 }
 
