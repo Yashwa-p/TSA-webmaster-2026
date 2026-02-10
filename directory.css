@@ -189,6 +189,11 @@ nav a.active::after {
   z-index: 2;
 }
 
+.nonprofits.fade-section {
+  opacity: 1; 
+  transform: none;
+}
+
 .visit-site {
   display: inline-block;
   margin-top: 18px;
