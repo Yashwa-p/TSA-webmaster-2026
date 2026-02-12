@@ -133,6 +133,15 @@ nav a.active::after {
 .carousel-track {
   display: flex;
   transition: transform 0.5s linear;
+
+  /* Fade the edges of the track itself */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
 }
 
 .slide {
