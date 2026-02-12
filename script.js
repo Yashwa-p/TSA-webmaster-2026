@@ -1,4 +1,4 @@
-// --- Scroll background animation ---
+// Scroll background animation
 window.addEventListener('scroll', () => {
   const scrollTop = window.scrollY;
   const docHeight = document.body.scrollHeight - window.innerHeight;
@@ -8,16 +8,30 @@ window.addEventListener('scroll', () => {
   document.body.style.backgroundPosition = `${posX}% ${posY}%`;
 });
 
-// --- Fade-in on scroll ---
+// Fade-in on scroll
 const fadeSections = document.querySelectorAll('.fade-section');
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add('visible');
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
   });
-}, { threshold: 0.2 });
+}, { threshold: 0.15 });
+
 fadeSections.forEach(section => observer.observe(section));
 
-// --- Hero parallax ---
+// Header color change
+const header = document.querySelector('header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 80) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
+// Hero parallax
 const track = document.querySelector('.image-track');
 if (track) {
   track.addEventListener('mousemove', (e) => {
@@ -26,16 +40,11 @@ if (track) {
   });
 }
 
-// --- Add underline spans to nav links ---
-document.querySelectorAll('nav a').forEach(link => {
-  const span = document.createElement('span');
-  span.classList.add('underline');
-  link.appendChild(span);
-});
-
-// --- Header color change on scroll ---
-const header = document.querySelector('header');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 80) header.classList.add('scrolled');
-  else header.classList.remove('scrolled');
-});
+// Carousel auto-slide
+const carouselTrack = document.querySelector('.carousel-track');
+const slides = document.querySelectorAll('.slide');
+let currentIndex = 0;
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  carouselTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+}, 4000);
