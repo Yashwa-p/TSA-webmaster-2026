@@ -61,7 +61,7 @@ nav {
 }
 
 nav a {
-  margin-left: 25px;
+  gap: 25px;
   display: inline-block;
   text-decoration: none;
   color: #333;
