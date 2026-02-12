@@ -103,43 +103,6 @@ nav {
   padding: 8px 0;
 }
 
-/* DROPDOWN */
-.dropdown {
-  position: absolute;
-  top: 130%;
-  left: 0;
-  background-color: white;
-  min-width: 180px;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  opacity: 0;
-  transform: translateY(-10px);
-  pointer-events: none;
-  transition: opacity 0.25s ease, transform 0.25s ease;
-  z-index: 1000;
-}
-
-.dropdown a {
-  display: block;
-  padding: 10px 15px;
-  font-size: 0.9rem;
-  color: #444;
-  text-decoration: none;
-  transition: background 0.2s ease;
-}
-
-.dropdown a:hover {
-  background-color: #f2f2f2;
-}
-
-/* SHOW ON HOVER */
-.nav-item:hover .dropdown {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-
 /* HERO SECTION */
 .hero {
   background-color: #fffaf7;
