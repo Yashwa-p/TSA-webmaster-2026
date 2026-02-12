@@ -126,19 +126,19 @@ nav a.active::after {
 .carousel {
   position: relative;
   max-width: 700px;
-  margin: 40px auto 0;
+  margin: 40px auto;
   overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
 .carousel-track {
   display: flex;
-  transition: transform 0.8s ease-in-out;
+  transition: transform 0.5s linear;
 }
 
 .slide {
-  min-width: 100%;
+  flex: 0 0 100%;
+  padding: 0 10px; /* spacing so edges are not cut off */
+  box-sizing: border-box;
 }
 
 .slide img {
@@ -146,14 +146,29 @@ nav a.active::after {
   height: 350px;
   object-fit: cover;
   display: block;
+  border-radius: 12px;
 }
 
-.hero-image {
-  width: 200px;
-  height: 200px;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+/* Blend edges using a gradient mask */
+.carousel::before,
+.carousel::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 60px; /* width of the fading edges */
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.carousel::before {
+  left: 0;
+  background: linear-gradient(to right, #fffaf7 0%, transparent 100%);
+}
+
+.carousel::after {
+  right: 0;
+  background: linear-gradient(to left, #fffaf7 0%, transparent 100%);
 }
 
 /* CTA BUTTON */
