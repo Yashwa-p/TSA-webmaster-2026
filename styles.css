@@ -7,6 +7,7 @@
 body {
   font-family: 'Barlow', sans-serif;
   background-size: 400% 400%;
+  background: linear-gradient(160deg, #9efcc8, #fbe5d0, #d4f0ff);
   background-attachment: scroll;
   transition: background-position 0.2s ease-out;
   color: #333;
