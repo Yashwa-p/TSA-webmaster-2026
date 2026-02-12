@@ -87,22 +87,6 @@ nav a:hover .underline {
   transform-origin: left;
 }
 
-nav {
-  display: flex;
-  gap: 25px;
-}
-
-.nav-item {
-  position: relative;
-}
-
-.nav-item > a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  padding: 8px 0;
-}
-
 /* HERO SECTION */
 .hero {
   background-color: #fffaf7;
