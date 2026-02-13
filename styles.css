@@ -147,6 +147,7 @@ nav a.active::after {
   object-fit: contain;
   display: block;
   border-radius: 12px;
+  background-color: transparent;
 }
 
 /* Blend edges using a gradient mask */
