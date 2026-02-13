@@ -42,22 +42,31 @@ if (track) {
 
 // Carousel auto-slide
 const carouselTrack = document.querySelector('.carousel-track');
-const slides = document.querySelectorAll('.slide');
+let slides = document.querySelectorAll('.slide');
+
+const firstClone = slides[0].cloneNode(true);
+carouselTrack.appendChild(firstClone);
+
+slides = document.querySelectorAll('.slide');
+
 let currentIndex = 0;
+const slideWidth = 100; // 100% per slide
 
 function nextSlide() {
   currentIndex++;
   carouselTrack.style.transition = 'transform 0.5s linear';
-  carouselTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-  if (currentIndex === slides.length - 1) {
-    setTimeout(() => {
-      carouselTrack.style.transition = 'none';
-      currentIndex = 0;
-      carouselTrack.style.transform = `translateX(0)`;
-    }, 500);
-  }
+  carouselTrack.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
 }
 
+carouselTrack.addEventListener('transitionend', () => {
+  // If we're on the cloned slide, jump back instantly
+  if (currentIndex === slides.length - 1) {
+    carouselTrack.style.transition = 'none';
+    currentIndex = 0;
+    carouselTrack.style.transform = `translateX(0)`;
+  }
+});
+
 setInterval(nextSlide, 3000);
+
 
