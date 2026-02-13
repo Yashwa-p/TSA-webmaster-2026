@@ -149,7 +149,6 @@ nav a.active::after {
 }
 
 /* CALENDAR */
-
 .calendar h2 {
     font-size: 2rem;
     margin-bottom: 20px;
@@ -197,6 +196,14 @@ iframe {
   height: 400px;
 }
 
+.section-note {
+  max-width: 750px;
+  margin: 0 auto 20px;
+  font-size: 1rem;
+  color: #666;
+}
+
+/* ADD NONPROFIT FORM */
 .add-nonprofit {
   padding: 60px 20px;
   background-color: #f4fff8;
